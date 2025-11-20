@@ -164,7 +164,7 @@ function App() {
           <div className="socials" style={{ marginTop: 12 }}>
             <a
               className="social"
-              href="#"
+              href="https://www.facebook.com/share/1ASvPY19kr/"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook (próximamente)"
