@@ -116,10 +116,10 @@ function App() {
         <section id="ubicacion" className="grid-2" aria-label="Ubicación y Horario">
           <article className="card">
             <h3>Ubicación</h3>
-            <p>Heredia Centro. Calle 8, avenida 12 y 14</p>
+            <p>Heredia Centro. avenida 8, calle 12 y 14</p>
             <a
               className="btn btn-link"
-              href="https://www.google.com/maps/search/?api=1&query=Heredia%20Centro%20Calle%208%20avenida%2012%20y%2014"
+              href="https://www.google.com/maps/place/ARCODALI/@9.9959137,-84.1225095,21z/data=!4m6!3m5!1s0x2c09b3e4d3ad6c45:0x2ccca9da93fafc7e!8m2!3d9.9959723!4d-84.1223449!16s%2Fg%2F11y0qhd7r_?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noreferrer"
             >
