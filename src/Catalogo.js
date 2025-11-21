@@ -98,7 +98,7 @@ const PRODUCTS = [
     id: "Cas",
     name: "Pulpa de Cas",
     category: "pulpas",              
-    lines: ["premium", "economica",], 
+    lines: ["premium"], 
     desc: "Pulpa natural de carambola azucarada.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 5600,
@@ -473,3 +473,4 @@ export default function Catalogo() {
     </div>
   );
 }
+
