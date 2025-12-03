@@ -170,39 +170,138 @@ body{
 }
 
 .lines h2 {
-  margin: 6px 0 8px;
+  margin: 6px 0 14px;
   font-size: clamp(18px, 2.2vw, 26px);
   color: var(--brand);
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* Desktop / pantallas grandes */
+/* subrayado similar a otras secciones */
+.lines h2::after {
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 56px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(47, 191, 113, 0.8),
+    rgba(47, 191, 113, 0.15)
+  );
+}
+
+/* grilla de 3 columnas en desktop */
 .lines-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 12px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.line-card {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: calc(33.33% - 8px);
+/* responsive */
+@media (max-width: 900px) {
+  .lines-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-  padding: 16px;
-  gap: 8px;
+@media (max-width: 600px) {
+  .lines-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background: #fff;
-  box-shadow: var(--shadow-sm);
+/* ===== Líneas (versión linda) ===== */
+.lines {
+  padding: 18px 0 6px;
+}
+
+.lines h2 {
+  margin: 6px 0 14px;
+  font-size: clamp(18px, 2.2vw, 26px);
+  color: var(--brand);
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lines h2::after {
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 56px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(47, 191, 113, 0.8),
+    rgba(47, 191, 113, 0.15)
+  );
+}
+
+/* Contenedor: 3 tarjetas en una fila en desktop, sin scroll */
+.lines .lines-grid {
+    margin-top: 8px; /* o 12px */
+  display: flex;
+  flex-wrap: nowrap;          /* en desktop NO se bajan */
+  gap: 24px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Tarjeta */
+.lines .line-card {
   display: flex;
   flex-direction: column;
-  transition: none;
+  justify-content: flex-start;
+  flex: 1 1 0;                /* se reparten el ancho en 3 partes iguales */
+  min-width: 0;
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+  font-size: 14px;
+  line-height: 1.4;
 }
 
-.line-badge {
+/* Pastilla del título de cada tarjeta */
+.lines .line-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 12px;
   font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
+
+.lines .line-card p {
+  margin: 0;
+}
+
+/* RESPONSIVE: en pantallas pequeñas sí dejamos que se bajen */
+@media (max-width: 900px) {
+  .lines .lines-grid {
+    flex-wrap: wrap;           /* ahora sí pueden bajar */
+  }
+
+  .lines .line-card {
+    flex: 1 1 calc(50% - 12px);  /* 2 por fila */
+  }
+}
+
+@media (max-width: 600px) {
+  .lines .line-card {
+    flex: 1 1 100%;             /* 1 por fila */
+  }
+}
+
 
 /* Medium: 2 columnas (tablets, etc.) */
 @media (max-width: 900px) {
@@ -323,11 +422,6 @@ body{
     padding: 10px 0;
   }
 
-  /* 👇 CAMBIO CLAVE: ocultar menú en modo celular */
-  .nav{
-    display:none;
-  }
-
   .brand-logo{
     width: 38px;
     height: 38px;
@@ -339,6 +433,13 @@ body{
 
   .brand-tagline{
     font-size: 0.8rem;
+  }
+
+  .nav{
+    flex-wrap: wrap;
+    row-gap: 6px;
+    column-gap: 12px;
+    font-size: 0.85rem;
   }
 
   .hero-inner{
