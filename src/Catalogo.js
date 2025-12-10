@@ -429,8 +429,8 @@ export default function Catalogo() {
       <div className="container lines-info">
         <h2 className="lines-info-title">Líneas de producto</h2>
         <p className="lines-info-text">
-          En ARCODALI nos enorgullece ofrecer pulpas de fruta de las más puras y concentradas del mercado, elaboradas con fruta real seleccionada.  
-          Nuestras pulpas son 100 % naturales, sin saborizantes ni aditivos: solo fruta hecha pulpa, fresca y de excelente calidad.
+             En ARCODALI trabajamos con fruta real hecha pulpa, elaborada con una de las mayores concentraciones y purezas del mercado. 
+             Diseñamos tres líneas para adaptarnos a las necesidades de cada cliente, manteniendo siempre nuestra esencia: calidad, naturalidad y sabor auténtico
 
         </p>
 
@@ -438,32 +438,34 @@ export default function Catalogo() {
           <div className="line-card premium">
             <h3>Premium</h3>
             <p>
-              Pulpa de fruta con un toque de azúcar. Máxima concentración y sabor
-              para refrescos, coctelería y repostería de alto nivel.
+              Una de las pulpas más puras y concentradas del mercado. Elaborada con fruta real y un toque de azúcar que potencia su sabor natural. 
+              Ideal para refrescos, coctelería y repostería que buscan ofrecer una experiencia superior en sabor y calidad.
             </p>
           </div>
 
           <div className="line-card economica">
             <h3>Económica</h3>
             <p>
-              La mejor relación rendimiento–precio. Rendimiento y frescura al mejor precio, sin renunciar al sabor ni a la frescura que distinguen a nuestras pulpas. 
-                Mantiene la frescura el sabor de la fruta, ideal para consumo diario y grandes volúmenes.
+              Rendimiento y frescura al mejor precio, sin renunciar al sabor auténtico ni a la pureza que distinguen a nuestras pulpas. 
+              Elaborada con fruta real y pensada para negocios de alto volumen que desean mantener un excelente estándar de calidad.
             </p>
           </div>
 
           <div className="line-card light">
             <h3>Light</h3>
             <p>
-              Endulzada con Natuvia, con menos calorías y un sabor más ligero.
-              La opción más ligera y saludable
+              Pulpa endulzada con Natuvia, manteniendo la misma pureza y concentración que caracteriza a nuestras pulpas tradicionales. 
+              Menos calorías, mismo sabor. Es la opción más ligera y saludable para quienes desean una alternativa sin azúcar tradicional.
+
             </p>
           </div>
 
           <div className="line-card citricos">
             <h3>Jugos Cítricos</h3>
             <p>
-              Jugos naturales de limón, naranja y mezclas especiales. Listos para usar
-              en cocina, coctelería o bebidas refrescantes.
+              Jugos naturales de limón, naranja y mezclas especiales. 
+              Frescos, versátiles y listos para usar, ideales para coctelería, gastronomía o bebidas refrescantes.
+              Con el sabor auténtico de la fruta real.
             </p>
           </div>
         </div>
@@ -555,3 +557,4 @@ export default function Catalogo() {
     </div>
   );
 }
+
