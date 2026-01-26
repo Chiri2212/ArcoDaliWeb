@@ -21,6 +21,12 @@ import PinaImg from "./imagenes/imag-pulpas/Pina.jpg";
 import Tamarindo2LImg from "./imagenes/imag-pulpas/Tamarindo 2L.png";
 import TamarindoImg from "./imagenes/imag-pulpas/Tamarindo.jpg";
 
+/* ==== Sabores Especiales (imágenes dentro de imag-pulpas) ==== */
+import CoctelPasionImg from "./imagenes/imag-pulpas/coctel_pasion.png";
+import PinaArrozImg from "./imagenes/imag-pulpas/pina_arroz.png";
+import PinaColadaImg from "./imagenes/imag-pulpas/pina_colada.png";
+import ResbaladeraImg from "./imagenes/imag-pulpas/resbaladera.png";
+
 /* ==== Imágenes de Grasas y Aceites ==== */
 import Aceite1893Img from "./imagenes/imag-grasas/Aceite 18.93.png";
 import AceiteOleinaImg from "./imagenes/imag-grasas/Aceite oleina.png";
@@ -82,7 +88,7 @@ const PRODUCTS = [
     id: "fresa",
     name: "Pulpa de Fresa",
     category: "pulpas",
-    lines: ["premium", "economica", "light"],
+    lines: ["premium", "light"],
     desc: "Pulpa natural para bebidas y coctelería.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 6500,
@@ -102,7 +108,7 @@ const PRODUCTS = [
     id: "Cas",
     name: "Pulpa de Cas",
     category: "pulpas",
-    lines: ["premium", "economica"],
+    lines: ["premium"],
     desc: "Pulpa natural de cas azucarada.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 5600,
@@ -112,7 +118,7 @@ const PRODUCTS = [
     id: "guanabana",
     name: "Pulpa de Guanábana",
     category: "pulpas",
-    lines: ["premium", "economica"],
+    lines: ["premium"],
     desc: "Pulpa cremosa y aromática, ideal para batidos, helados y refrescos naturales.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 6500,
@@ -122,7 +128,7 @@ const PRODUCTS = [
     id: "manga",
     name: "Pulpa de Manga",
     category: "pulpas",
-    lines: ["premium", "economica", "light"],
+    lines: ["premium", "light"],
     desc: "Dulce, espesa y tropical. Perfecta para smoothies, repostería y coctelería.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 5600,
@@ -132,7 +138,7 @@ const PRODUCTS = [
     id: "maracuya",
     name: "Pulpa de Maracuyá",
     category: "pulpas",
-    lines: ["premium", "economica", "light"],
+    lines: ["premium", "light"],
     desc: "Pulpa exótica con el equilibrio justo entre acidez y dulzura. Ideal para cocteles, repostería o refrescos.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 6500,
@@ -142,7 +148,7 @@ const PRODUCTS = [
     id: "mixto",
     name: "Pulpa Mixta",
     category: "pulpas",
-    lines: ["premium", "economica"],
+    lines: ["premium"],
     desc: "Combinación deliciosa de frutas naturales que aportan sabor y rendimiento a cualquier preparación.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 5600,
@@ -152,7 +158,7 @@ const PRODUCTS = [
     id: "mora",
     name: "Pulpa de Mora",
     category: "pulpas",
-    lines: ["premium", "economica", "light"],
+    lines: ["premium", "light"],
     desc: "Sabor intenso y color vibrante, perfecta para batidos, repostería y refrescos naturales.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 6500,
@@ -162,7 +168,7 @@ const PRODUCTS = [
     id: "pina",
     name: "Pulpa de Piña",
     category: "pulpas",
-    lines: ["premium", "economica", "light"],
+    lines: ["premium", "light"],
     desc: "Refrescante y tropical, ideal para piñas coladas, smoothies o jugos naturales.",
     presentations: ["Galón", "Preparación 1:3"],
     priceFrom: 5600,
@@ -182,11 +188,55 @@ const PRODUCTS = [
     id: "tamarindo-2l",
     name: "Pulpa de Tamarindo 2L",
     category: "pulpas",
-    lines: ["economica"],
+    lines: ["light"],
     desc: "Versión práctica en presentación de 2 litros, con el mismo sabor auténtico del tamarindo natural sin azúcar.",
     presentations: ["2 Litros", "Preparación 1:3"],
     priceFrom: 5500,
     img: Tamarindo2LImg,
+  },
+
+  /* --------------------------------------
+   Sabores Especiales ARCODALI
+-----------------------------------------*/
+  {
+    id: "pina-colada-se",
+    name: "Piña Colada",
+    category: "sabores",
+    lines: ["sabores"],
+    desc: "Base para bebidas o cocteles. Preparación sugerida: 1 parte + 3 partes de líquido. Rinde x4.",
+    presentations: ["Galón", "½ Galón", "Litro"],
+    priceFrom: 1800,
+    img: PinaColadaImg,
+  },
+  {
+    id: "pina-arroz-se",
+    name: "Piña con Arroz",
+    category: "sabores",
+    lines: ["sabores"],
+    desc: "Base para bebidas o cocteles. Preparación sugerida: 1 parte + 3 partes de líquido. Rinde x4.",
+    presentations: ["Galón", "½ Galón", "Litro"],
+    priceFrom: 1800,
+    img: PinaArrozImg,
+  },
+  {
+    id: "coctel-pasion-se",
+    name: "Cóctel Pasión",
+    category: "sabores",
+    lines: ["sabores"],
+    desc: "Base para bebidas o cocteles. Preparación sugerida: 1 parte + 3 partes de líquido. Rinde x4.",
+    presentations: ["Galón", "½ Galón", "Litro"],
+    priceFrom: 1800,
+    img: CoctelPasionImg,
+  },
+  {
+    id: "resbaladera-se",
+    name: "Resbaladera",
+    category: "sabores",
+    lines: ["sabores"],
+    desc: "Bebida lista para disfrutar. Sabor tradicional y textura cremosa y lista para disfrutar.",
+    presentations: ["Galón", "½ Galón", "Litro"],
+    priceFrom: 1800,
+    img: ResbaladeraImg,
   },
 
   /* --------------------------------------
@@ -258,19 +308,20 @@ const PRODUCTS = [
 ];
 
 /* Mapea categorías a títulos y orden deseado */
-const CATEGORY_ORDER = ["jugos", "pulpas", "grasas"];
+const CATEGORY_ORDER = ["jugos", "pulpas", "sabores", "grasas"];
 const CATEGORY_LABEL = {
   jugos: "Jugos Cítricos",
   pulpas: "Pulpas Naturales",
+  sabores: "Sabores Especiales",
   grasas: "Grasas & Aceites",
 };
 
 /* Opciones de línea para el filtro general */
 const LINE_OPTIONS = [
   { value: "premium", label: "Premium" },
-  { value: "economica", label: "Económica" },
   { value: "light", label: "Light" },
-  { value: "citricos", label: "Cítricos" }, // para jugos como el Mesino
+  { value: "citricos", label: "Cítricos" },
+  { value: "sabores", label: "Sabores Especiales" },
 ];
 
 /* Util: normaliza búsqueda */
@@ -300,21 +351,21 @@ function ProductCard({ item }) {
                 key={ln}
                 className={
                   ln === "premium" ||
-                  ln === "economica" ||
                   ln === "light" ||
-                  ln === "citricos"
+                  ln === "citricos" ||
+                  ln === "sabores"
                     ? `line-badge ${ln}`
                     : "line-badge"
                 }
               >
                 {ln === "premium"
                   ? "Premium"
-                  : ln === "economica"
-                  ? "Económica"
                   : ln === "light"
                   ? "Light"
                   : ln === "citricos"
                   ? "Cítricos"
+                  : ln === "sabores"
+                  ? "Sabores Especiales"
                   : ln}
               </span>
             ))}
@@ -323,16 +374,15 @@ function ProductCard({ item }) {
 
         {item.desc && <p className="desc">{item.desc}</p>}
 
-        {Array.isArray(item.presentations) &&
-          item.presentations.length > 0 && (
-            <div className="presentations">
-              {item.presentations.map((p) => (
-                <span className="tag" key={p}>
-                  {p}
-                </span>
-              ))}
-            </div>
-          )}
+        {Array.isArray(item.presentations) && item.presentations.length > 0 && (
+          <div className="presentations">
+            {item.presentations.map((p) => (
+              <span className="tag" key={p}>
+                {p}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="actions">
@@ -375,9 +425,7 @@ export default function Catalogo() {
     const q = normalize(query);
     return PRODUCTS.filter((p) => {
       const byCategory = category ? p.category === category : true;
-      const byLine = line
-        ? Array.isArray(p.lines) && p.lines.includes(line)
-        : true;
+      const byLine = line ? Array.isArray(p.lines) && p.lines.includes(line) : true;
       const byQuery = q
         ? normalize(p.name).includes(q) ||
           normalize(p.desc || "").includes(q) ||
@@ -387,7 +435,7 @@ export default function Catalogo() {
     });
   }, [category, line, query]);
 
-  /* Agrupar por categoría y ordenar secciones: Jugos → Pulpas → Grasas */
+  /* Agrupar por categoría y ordenar secciones */
   const grouped = useMemo(() => {
     const groups = CATEGORY_ORDER.reduce((acc, c) => ({ ...acc, [c]: [] }), {});
     for (const p of filtered) {
@@ -405,9 +453,7 @@ export default function Catalogo() {
     },
     line && {
       key: "line",
-      label: `Línea: ${
-        LINE_OPTIONS.find((o) => o.value === line)?.label || line
-      }`,
+      label: `Línea: ${LINE_OPTIONS.find((o) => o.value === line)?.label || line}`,
       onClear: () => setLine(""),
     },
     query && {
@@ -422,50 +468,53 @@ export default function Catalogo() {
       {/* Hero */}
       <div className="container catalog-hero">
         <h1>Catálogo de Productos</h1>
-        <p>Explore nuestras líneas: Pulpas, Jugos Cítricos y Grasas & Aceites.</p>
+        <p>
+          Explore nuestras líneas: Pulpas, Jugos Cítricos, Sabores Especiales y
+          Grasas & Aceites.
+        </p>
       </div>
 
       {/* Bloque informativo de líneas */}
       <div className="container lines-info">
         <h2 className="lines-info-title">Líneas de producto</h2>
         <p className="lines-info-text">
-             En ARCODALI trabajamos con fruta real hecha pulpa, elaborada con una de las mayores concentraciones y purezas del mercado. 
-             Diseñamos tres líneas para adaptarnos a las necesidades de cada cliente, manteniendo siempre nuestra esencia: calidad, naturalidad y sabor auténtico
-
+          En ARCODALI nos enorgullece ofrecer pulpas de fruta de las más puras y
+          concentradas del mercado, elaboradas con fruta real seleccionada.
+          Nuestras pulpas son 100 % naturales, sin saborizantes ni aditivos: solo
+          fruta hecha pulpa, fresca y de excelente calidad.
         </p>
 
         <div className="lines-grid">
           <div className="line-card premium">
             <h3>Premium</h3>
             <p>
-              Una de las pulpas más puras y concentradas del mercado. Elaborada con fruta real y un toque de azúcar que potencia su sabor natural. 
-              Ideal para refrescos, coctelería y repostería que buscan ofrecer una experiencia superior en sabor y calidad.
-            </p>
-          </div>
-
-          <div className="line-card economica">
-            <h3>Económica</h3>
-            <p>
-              Rendimiento y frescura al mejor precio, sin renunciar al sabor auténtico ni a la pureza que distinguen a nuestras pulpas. 
-              Elaborada con fruta real y pensada para negocios de alto volumen que desean mantener un excelente estándar de calidad.
+              Pulpa de fruta con un toque de azúcar. Máxima concentración y sabor
+              para refrescos, coctelería y repostería.
             </p>
           </div>
 
           <div className="line-card light">
             <h3>Light</h3>
             <p>
-              Pulpa endulzada con Natuvia, manteniendo la misma pureza y concentración que caracteriza a nuestras pulpas tradicionales. 
-              Menos calorías, mismo sabor. Es la opción más ligera y saludable para quienes desean una alternativa sin azúcar tradicional.
-
+              Endulzada con Natuvia, con menos calorías y un sabor más ligero.
+              La opción más ligera y saludable.
             </p>
           </div>
 
           <div className="line-card citricos">
             <h3>Jugos Cítricos</h3>
             <p>
-              Jugos naturales de limón, naranja y mezclas especiales. 
-              Frescos, versátiles y listos para usar, ideales para coctelería, gastronomía o bebidas refrescantes.
-              Con el sabor auténtico de la fruta real.
+              Jugos naturales de limón, naranja y mezclas especiales. Listos para
+              usar en cocina, coctelería o bebidas refrescantes.
+            </p>
+          </div>
+
+          {/* ✅ NUEVO CUADRO */}
+          <div className="line-card sabores">
+            <h3>Sabores Especiales</h3>
+            <p>
+              Bebidas naturales sin alcohol, con combinaciones especiales de frutas
+              reales y recetas únicas para compartir y disfrutar.
             </p>
           </div>
         </div>
@@ -483,6 +532,7 @@ export default function Catalogo() {
             <option value="">Todas las categorías</option>
             <option value="jugos">Jugos Cítricos</option>
             <option value="pulpas">Pulpas Naturales</option>
+            <option value="sabores">Sabores Especiales</option>
             <option value="grasas">Grasas y Aceites</option>
           </select>
 
@@ -502,7 +552,7 @@ export default function Catalogo() {
 
           <input
             className="search"
-            placeholder="Buscar producto..."
+            placeholder="        Buscar producto..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             aria-label="Buscar producto"
@@ -511,11 +561,7 @@ export default function Catalogo() {
 
         {/* Chips activos */}
         {chips.length > 0 && (
-          <div
-            className="chips"
-            aria-label="Filtros activos"
-            style={{ marginTop: 12 }}
-          >
+          <div className="chips" aria-label="Filtros activos" style={{ marginTop: 12 }}>
             {chips.map((c) => (
               <button
                 key={c.key}
@@ -531,9 +577,10 @@ export default function Catalogo() {
         )}
       </div>
 
-      {/* Secciones en orden: Jugos → Pulpas → Grasas */}
+      {/* Secciones en orden */}
       <CategorySection title="Jugos Cítricos" items={grouped.jugos} />
       <CategorySection title="Pulpas Naturales" items={grouped.pulpas} />
+      <CategorySection title="Sabores Especiales ARCODALI" items={grouped.sabores} />
       <CategorySection title="Grasas & Aceites" items={grouped.grasas} />
 
       {/* Botón flotante de volver */}
@@ -557,4 +604,3 @@ export default function Catalogo() {
     </div>
   );
 }
-
