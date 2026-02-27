@@ -7,7 +7,7 @@ import LimonadaYerbabuenaImg from "./imagenes/imag-jugos/Limonada yerbabuena.jpg
 import MandarinoImg from "./imagenes/imag-jugos/Mandarino publi.png";
 import MesinoImg from "./imagenes/imag-jugos/Mesino publi.jpg";
 import NaranjaImg from "./imagenes/imag-jugos/Naranja publi.jpg";
-
+import NaranjaRemolacha from "./imagenes/imag-jugos/Naranja con Remolacha.jpg";
 /* Pulpas */
 import FresaImg from "./imagenes/imag-pulpas/Fresa.jpg";
 import CarambolaImg from "./imagenes/imag-pulpas/Carambola.jpg";
@@ -79,6 +79,15 @@ const PRODUCTS = [
     presentations: ["Galón", "½ Galón", "Litro"],
     priceFrom: 1700,
     img: LimonadaYerbabuenaImg,
+  },  {
+    id: "Naranja-con-Remolacha",
+    name: "Naranja con Remolacha",
+    category: "jugos",
+    lines: ["citricos"],
+    desc: "Sabor cítrico y suave, perfecto para cocteles, a 100% natural y listo para usar.",
+    presentations: ["Galón", "½ Galón", "Litro"],
+    priceFrom: 1600,
+    img: NaranjaRemolacha,
   },
 
   /* --------------------------------------
@@ -306,7 +315,6 @@ const PRODUCTS = [
     img: MargarinaPasteleraImg,
   },
 ];
-
 /* Mapea categorías a títulos y orden deseado */
 const CATEGORY_ORDER = ["jugos", "pulpas", "sabores", "grasas"];
 const CATEGORY_LABEL = {
@@ -401,10 +409,14 @@ function ProductCard({ item }) {
 }
 
 /* Bloque por categoría (sección) */
-function CategorySection({ title, items }) {
+function CategorySection({ id, title, items }) {
   if (!items || items.length === 0) return null;
   return (
-    <section className="container" style={{ paddingTop: 8, paddingBottom: 12 }}>
+    <section
+      id={id}
+      className="container"
+      style={{ paddingTop: 8, paddingBottom: 12 }}
+    >
       <h2 style={{ margin: "12px 0 8px" }}>{title}</h2>
       <div className="product-grid">
         {items.map((it) => (
@@ -419,6 +431,18 @@ export default function Catalogo() {
   const [category, setCategory] = useState("");
   const [line, setLine] = useState("");
   const [query, setQuery] = useState("");
+
+  // ✅ NUEVO: al clickear una línea, setea filtros + baja a sección
+  const goToLine = ({ nextCategory = "", nextLine = "", sectionId = "" }) => {
+    setCategory(nextCategory);
+    setLine(nextLine);
+    setQuery("");
+
+    setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+  };
 
   /* Productos filtrados */
   const filtered = useMemo(() => {
@@ -485,7 +509,26 @@ export default function Catalogo() {
         </p>
 
         <div className="lines-grid">
-          <div className="line-card premium">
+          <div
+            className="line-card premium"
+            role="button"
+            tabIndex={0}
+            onClick={() =>
+              goToLine({
+                nextCategory: "pulpas",
+                nextLine: "premium",
+                sectionId: "sec-pulpas",
+              })
+            }
+            onKeyDown={(e) =>
+              e.key === "Enter" &&
+              goToLine({
+                nextCategory: "pulpas",
+                nextLine: "premium",
+                sectionId: "sec-pulpas",
+              })
+            }
+          >
             <h3>Premium</h3>
             <p>
               Pulpa de fruta con un toque de azúcar. Máxima concentración y sabor
@@ -493,7 +536,26 @@ export default function Catalogo() {
             </p>
           </div>
 
-          <div className="line-card light">
+          <div
+            className="line-card light"
+            role="button"
+            tabIndex={0}
+            onClick={() =>
+              goToLine({
+                nextCategory: "pulpas",
+                nextLine: "light",
+                sectionId: "sec-pulpas",
+              })
+            }
+            onKeyDown={(e) =>
+              e.key === "Enter" &&
+              goToLine({
+                nextCategory: "pulpas",
+                nextLine: "light",
+                sectionId: "sec-pulpas",
+              })
+            }
+          >
             <h3>Light</h3>
             <p>
               Endulzada con Natuvia, con menos calorías y un sabor más ligero.
@@ -501,7 +563,26 @@ export default function Catalogo() {
             </p>
           </div>
 
-          <div className="line-card citricos">
+          <div
+            className="line-card citricos"
+            role="button"
+            tabIndex={0}
+            onClick={() =>
+              goToLine({
+                nextCategory: "jugos",
+                nextLine: "citricos",
+                sectionId: "sec-jugos",
+              })
+            }
+            onKeyDown={(e) =>
+              e.key === "Enter" &&
+              goToLine({
+                nextCategory: "jugos",
+                nextLine: "citricos",
+                sectionId: "sec-jugos",
+              })
+            }
+          >
             <h3>Jugos Cítricos</h3>
             <p>
               Jugos naturales de limón, naranja y mezclas especiales. Listos para
@@ -510,7 +591,26 @@ export default function Catalogo() {
           </div>
 
           {/* ✅ NUEVO CUADRO */}
-          <div className="line-card sabores">
+          <div
+            className="line-card sabores"
+            role="button"
+            tabIndex={0}
+            onClick={() =>
+              goToLine({
+                nextCategory: "sabores",
+                nextLine: "sabores",
+                sectionId: "sec-sabores",
+              })
+            }
+            onKeyDown={(e) =>
+              e.key === "Enter" &&
+              goToLine({
+                nextCategory: "sabores",
+                nextLine: "sabores",
+                sectionId: "sec-sabores",
+              })
+            }
+          >
             <h3>Sabores Especiales</h3>
             <p>
               Bebidas naturales sin alcohol, con combinaciones especiales de frutas
@@ -578,10 +678,14 @@ export default function Catalogo() {
       </div>
 
       {/* Secciones en orden */}
-      <CategorySection title="Jugos Cítricos" items={grouped.jugos} />
-      <CategorySection title="Pulpas Naturales" items={grouped.pulpas} />
-      <CategorySection title="Sabores Especiales ARCODALI" items={grouped.sabores} />
-      <CategorySection title="Grasas & Aceites" items={grouped.grasas} />
+      <CategorySection id="sec-jugos" title="Jugos Cítricos" items={grouped.jugos} />
+      <CategorySection id="sec-pulpas" title="Pulpas Naturales" items={grouped.pulpas} />
+      <CategorySection
+        id="sec-sabores"
+        title="Sabores Especiales ARCODALI"
+        items={grouped.sabores}
+      />
+      <CategorySection id="sec-grasas" title="Grasas & Aceites" items={grouped.grasas} />
 
       {/* Botón flotante de volver */}
       <Link className="btn-float" to="/" aria-label="Volver al inicio">
