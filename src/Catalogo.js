@@ -34,7 +34,7 @@ import MargarinaPasteleraImg from "./imagenes/imag-grasas/Margarina Pastelera.pn
 /* ==== Jugos adicionales ==== */
 import NaranjaZanahoriaImg from "./imagenes/imag-pulpas/Naranja con Zanahoria.png";
 /* ==== Sabores Especiales (presentaciones) ==== */
-import CoctelPasionPresentacionImg from "./imagenes/imag-pulpas/Coctel Passion- Presentación 1.png";
+import CoctelPasionPresentacionImg from "./imagenes/imag-pulpas/coctel_pasion.png";
 import CremaCocoImg from "./imagenes/imag-pulpas/Crema de coco- Presentación.png";
 import PinaColadaPresentacionImg from "./imagenes/imag-pulpas/Piña Colada- Presentación.png";
 import PinaArrozPresentacionImg from "./imagenes/imag-pulpas/Piña con Arroz - Presentación.png";
