@@ -19,10 +19,7 @@ import PinaImg from "./imagenes/imag-pulpas/Pina.jpg";
 import Tamarindo2LImg from "./imagenes/imag-pulpas/Tamarindo 2L.png";
 import TamarindoImg from "./imagenes/imag-pulpas/Tamarindo.jpg";
 /* ==== Sabores Especiales (imágenes dentro de imag-pulpas) ==== */
-import CoctelPasionImg from "./imagenes/imag-pulpas/coctel_pasion.png";
-import PinaArrozImg from "./imagenes/imag-pulpas/pina_arroz.png";
-import PinaColadaImg from "./imagenes/imag-pulpas/pina_colada.png";
-import ResbaladeraImg from "./imagenes/imag-pulpas/resbaladera.png";
+
 /* ==== Imágenes de Grasas y Aceites ==== */
 import Aceite1893Img from "./imagenes/imag-grasas/Aceite 18.93.png";
 import AceiteOleinaImg from "./imagenes/imag-grasas/Aceite oleina.png";
