@@ -6,7 +6,6 @@ import LimonadaYerbabuenaImg from "./imagenes/imag-jugos/Limonada yerbabuena.jpg
 import MandarinoImg from "./imagenes/imag-jugos/Mandarino publi.png";
 import MesinoImg from "./imagenes/imag-jugos/Mesino publi.jpg";
 import NaranjaImg from "./imagenes/imag-jugos/Naranja publi.jpg";
-import NaranjaRemolacha from "./imagenes/imag-jugos/Naranja con Remolacha.jpg";
 /* Pulpas */
 import FresaImg from "./imagenes/imag-pulpas/Fresa.jpg";
 import CarambolaImg from "./imagenes/imag-pulpas/Carambola.jpg";
