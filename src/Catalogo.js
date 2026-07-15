@@ -148,7 +148,7 @@ const PRODUCTS = [
     presentations: ["Galón", "Preparación 1:3"],
     prices: {
       premium: {
-        Galón: 7500,
+        Galón: 8500,
       },
     },
     img: CasImg,
@@ -179,7 +179,7 @@ const PRODUCTS = [
     presentations: ["Galón", "Preparación 1:3"],
     prices: {
       premium: {
-        Galón: 11500,
+        Galón: 12000,
       },
     },
     img: GuanabanaImg,
