@@ -8,7 +8,7 @@ import MandarinoImg from "./imagenes/imag-jugos/Mandarino publi.png";
 import MesinoImg from "./imagenes/imag-jugos/Mesino publi.jpg";
 import NaranjaImg from "./imagenes/imag-jugos/Naranja publi.jpg";
 
-/* Pulpas */
+/* ==== Pulpas ==== */
 import FresaImg from "./imagenes/imag-pulpas/Fresa.jpg";
 import CarambolaImg from "./imagenes/imag-pulpas/Carambola.jpg";
 import CasImg from "./imagenes/imag-pulpas/Cas.jpg";
@@ -21,7 +21,7 @@ import PinaImg from "./imagenes/imag-pulpas/Pina.jpg";
 import Tamarindo2LImg from "./imagenes/imag-pulpas/Tamarindo 2L.png";
 import TamarindoImg from "./imagenes/imag-pulpas/Tamarindo.jpg";
 
-/* Grasas y Aceites */
+/* ==== Grasas y Aceites ==== */
 import Aceite1893Img from "./imagenes/imag-grasas/Aceite 18.93.png";
 import AceiteOleinaImg from "./imagenes/imag-grasas/Aceite oleina.png";
 import MantecaMultiImg from "./imagenes/imag-grasas/Manteca Multi.jpeg";
@@ -30,18 +30,145 @@ import MargarinaHojaldreImg from "./imagenes/imag-grasas/Margarina Hojaldre.png"
 import MargarinaMultipropositoImg from "./imagenes/imag-grasas/Margarina Multipropósito.png";
 import MargarinaPasteleraImg from "./imagenes/imag-grasas/Margarina Pastelera.png";
 
-/* Jugos adicionales */
+/* ==== Jugos adicionales ==== */
 import NaranjaZanahoriaImg from "./imagenes/imag-pulpas/Naranja con Zanahoria.png";
 import NaranjaRemolachaAltImg from "./imagenes/imag-pulpas/Naranja con Remolacha.png";
 
-/* Sabores Especiales */
+/* ==== Sabores Especiales ==== */
 import CoctelPasionPresentacionImg from "./imagenes/imag-pulpas/coctel_pasion.png";
 import CremaCocoImg from "./imagenes/imag-pulpas/Crema de coco- Presentación.png";
 import PinaColadaPresentacionImg from "./imagenes/imag-pulpas/Piña Colada- Presentación.png";
 import PinaArrozPresentacionImg from "./imagenes/imag-pulpas/Piña con Arroz - Presentación.png";
 import ResbaladeraPresentacionImg from "./imagenes/imag-pulpas/Resbaladera- Presentación.png";
 
+/* ==== Frutas Congeladas ==== */
+import CarambolaFrutaImg from "./imagenes/imagenes-frutas/Carambola.png";
+import CasFrutaImg from "./imagenes/imagenes-frutas/Cas.png";
+import GuanabanaFrutaImg from "./imagenes/imagenes-frutas/Guanabana.png";
+import MaracuyaFrutaImg from "./imagenes/imagenes-frutas/Maracuya.png";
+import MixtoFrutasImg from "./imagenes/imagenes-frutas/Mixto Frutas.png";
+import MoraFrutaImg from "./imagenes/imagenes-frutas/Mora.png";
+import PapayaFrutaImg from "./imagenes/imagenes-frutas/Papaya.png";
+import PinaFrutaImg from "./imagenes/imagenes-frutas/Piña.png";
+import SandiaFrutaImg from "./imagenes/imagenes-frutas/Sandía.png";
+import MangoFrutaImg from "./imagenes/imagenes-frutas/Mango.png";
+import FresaFrutaImg from "./imagenes/imagenes-frutas/Fresa.png";
+
+
+
+
 const PRODUCTS = [
+  /* ==== Frutas Congeladas ==== */
+  {
+    id: "fruta-guanabana",
+    name: "Guanábana",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Fruta de guanábana congelada, ideal para preparar batidos, refrescos y postres.",
+    presentations: ["1 kg"],
+    prices: { congeladas: { "1 kg": 2260 } },
+    img: GuanabanaFrutaImg,
+  },
+  {
+    id: "fruta-sandia",
+    name: "Sandía",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Sandía congelada, refrescante y práctica para bebidas y preparaciones frutales.",
+    presentations: ["1 kg"],
+    prices: { congeladas: { "1 kg": 2020 } },
+    img: SandiaFrutaImg,
+  },
+  {
+    id: "fruta-mixto",
+    name: "Mixto de Frutas",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Mezcla congelada de mango, papaya, fresa, piña y melón, ideal para batidos y ensaladas de frutas.",
+    presentations: ["1 kg"],
+    prices: { congeladas: { "1 kg": 2260 } },
+    img: MixtoFrutasImg,
+  },
+  {
+    id: "fruta-cas",
+    name: "Cas",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Cas congelado para refrescos tradicionales, batidos y otras preparaciones.",
+    presentations: ["1 kg"],
+    prices: { congeladas: { "1 kg": 2260 } },
+    img: CasFrutaImg,
+  },
+  {
+    id: "fruta-mango",
+    name: "Mango",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Mango congelado, dulce y tropical, ideal para batidos y postres.",
+    presentations: ["1 kg"],
+    prices: { congeladas: { "1 kg": 2020 } },
+    img: MangoFrutaImg,
+  },
+  {
+    id: "fruta-pina",
+    name: "Piña",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Piña congelada, lista para bebidas, coctelería y recetas tropicales.",
+    presentations: ["1 kg"],
+    prices: { congeladas: { "1 kg": 2020 } },
+    img: PinaFrutaImg,
+  },
+  {
+    id: "fruta-carambola",
+    name: "Carambola",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Carambola congelada de sabor tropical, perfecta para refrescos y batidos.",
+    presentations: ["1 kg"],
+    prices: { congeladas: { "1 kg": 2020 } },
+    img: CarambolaFrutaImg,
+  },
+  {
+    id: "fruta-papaya",
+    name: "Papaya",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Papaya congelada, práctica para smoothies, batidos y postres.",
+    presentations: ["1 kg"],
+    prices: { congeladas: { "1 kg": 2020 } },
+    img: PapayaFrutaImg,
+  },
+  {
+    id: "fruta-fresa",
+    name: "Fresa",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Fresa congelada, ideal para batidos, repostería y bebidas.",
+    presentations: ["400 g"],
+    prices: { congeladas: { "400 g": 2260 } },
+    img: FresaFrutaImg,
+  },
+  {
+    id: "fruta-maracuya",
+    name: "Maracuyá",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Maracuyá congelado de sabor intenso, ideal para bebidas, postres y coctelería.",
+    presentations: ["400 g"],
+    prices: { congeladas: { "400 g": 2260 } },
+    img: MaracuyaFrutaImg,
+  },
+  {
+    id: "fruta-mora",
+    name: "Mora",
+    category: "frutas",
+    lines: ["congeladas"],
+    desc: "Mora congelada, ideal para refrescos, batidos y repostería.",
+    presentations: ["350 g"],
+    prices: { congeladas: { "350 g": 2260 } },
+    img: MoraFrutaImg,
+  },
   {
     id: "limon-mandarino",
     name: "Jugo de Limón Mandarino",
@@ -72,7 +199,7 @@ const PRODUCTS = [
         Galón: 5500,
       },
     },
-    img: MesinoImg,
+     img: MesinoImg,
   },
   {
     id: "naranja",
@@ -138,7 +265,6 @@ const PRODUCTS = [
     },
     img: LimonadaYerbabuenaImg,
   },
-
   {
     id: "cas",
     name: "Pulpa de Cas",
@@ -308,7 +434,6 @@ const PRODUCTS = [
     },
     img: Tamarindo2LImg,
   },
-
   {
     id: "pina-colada-se",
     name: "Piña Colada",
@@ -389,7 +514,6 @@ const PRODUCTS = [
     },
     img: CremaCocoImg,
   },
-
   {
     id: "aceite-1893",
     name: "Aceite 18.93L",
@@ -454,64 +578,55 @@ const PRODUCTS = [
     img: MargarinaPasteleraImg,
   },
 ];
-
-const CATEGORY_ORDER = ["jugos", "pulpas", "sabores", "grasas"];
-
+const CATEGORY_ORDER = ["jugos", "pulpas", "sabores", "grasas", "frutas"];
 const CATEGORY_LABEL = {
   jugos: "Jugos Cítricos",
   pulpas: "Pulpas Naturales",
   sabores: "Sabores Especiales",
   grasas: "Grasas & Aceites",
+  frutas: "Frutas Congeladas",
 };
-
 const LINE_OPTIONS = [
   { value: "premium", label: "Premium" },
   { value: "light", label: "Light" },
   { value: "citricos", label: "Cítricos" },
   { value: "sabores", label: "Sabores Especiales" },
+  { value: "congeladas", label: "Frutas Congeladas" },
 ];
-
 function normalize(str = "") {
   return str
     .toString()
     .toLowerCase()
     .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "");
+    .replace(/[\u0300-\u036f]/g, "");
 }
-
 function getLineLabel(lineName) {
   if (lineName === "premium") return "Premium";
   if (lineName === "light") return "Light";
   if (lineName === "citricos") return "Cítricos";
   if (lineName === "sabores") return "Sabores Especiales";
+  if (lineName === "congeladas") return "Congeladas";
   if (lineName === "consultar") return "Consultar";
   return lineName;
 }
-
 function getVisiblePrices(item, activeLine) {
   if (!item.prices) return null;
-
   if (activeLine && item.prices[activeLine]) {
     return {
       [activeLine]: item.prices[activeLine],
     };
   }
-
   return item.prices;
 }
-
 function ProductCard({ item, activeLine }) {
   const visiblePrices = getVisiblePrices(item, activeLine);
-
   return (
     <article className="product-card" id={`detalle-${item.id}`}>
       <div className="product-media">
         <img src={item.img} alt={item.name} />
       </div>
-
       <div className="product-body">
         <h3 className="product-title">{item.name}</h3>
-
         {Array.isArray(item.lines) && item.lines.length > 0 && (
           <div className="product-meta">
             {item.lines.map((ln) => (
@@ -521,7 +636,8 @@ function ProductCard({ item, activeLine }) {
                   ln === "premium" ||
                   ln === "light" ||
                   ln === "citricos" ||
-                  ln === "sabores"
+                  ln === "sabores" ||
+                    ln === "congeladas"
                     ? `line-badge ${ln}`
                     : "line-badge"
                 }
@@ -531,9 +647,7 @@ function ProductCard({ item, activeLine }) {
             ))}
           </div>
         )}
-
         {item.desc && <p className="desc">{item.desc}</p>}
-
         {Array.isArray(item.presentations) && item.presentations.length > 0 && (
           <div className="presentations">
             {item.presentations.map((p) => (
@@ -544,7 +658,6 @@ function ProductCard({ item, activeLine }) {
           </div>
         )}
       </div>
-
       <div className="actions">
   <div className="price-table">
     {visiblePrices ? (
@@ -554,7 +667,6 @@ function ProductCard({ item, activeLine }) {
             ? getLineLabel(Object.keys(visiblePrices)[0])
             : "Precios"}
         </h4>
-
         {Object.entries(visiblePrices).flatMap(([lineName, presentations]) =>
           Object.entries(presentations).map(([presentation, price]) => (
             <div className="price-row" key={`${lineName}-${presentation}`}>
@@ -563,25 +675,21 @@ function ProductCard({ item, activeLine }) {
                   ? `${getLineLabel(lineName)} - ${presentation}`
                   : presentation}
               </span>
-
               <strong>₡{price.toLocaleString("es-CR")}</strong>
             </div>
           ))
         )}
-
-        <small>+ IVA</small>
+        {item.category !== "frutas" && <small>+ IVA</small>}
       </div>
     ) : (
       <div className="price-group precios-unificados">
         <h4>Consultar</h4>
-
         {item.presentations?.map((presentation) => (
           <div className="price-row" key={presentation}>
             <span>{presentation}</span>
             <strong>Consulte</strong>
           </div>
         ))}
-
         <small>Precio según disponibilidad</small>
       </div>
     )}
@@ -590,10 +698,8 @@ function ProductCard({ item, activeLine }) {
     </article>
   );
 }
-
 function CategorySection({ id, title, items, activeLine }) {
   if (!items || items.length === 0) return null;
-
   return (
     <section
       id={id}
@@ -601,7 +707,6 @@ function CategorySection({ id, title, items, activeLine }) {
       style={{ paddingTop: 8, paddingBottom: 12 }}
     >
       <h2 style={{ margin: "12px 0 8px" }}>{title}</h2>
-
       <div className="product-grid">
         {items.map((it) => (
           <ProductCard key={it.id} item={it} activeLine={activeLine} />
@@ -610,54 +715,42 @@ function CategorySection({ id, title, items, activeLine }) {
     </section>
   );
 }
-
 export default function Catalogo() {
   const [category, setCategory] = useState("");
   const [line, setLine] = useState("");
   const [query, setQuery] = useState("");
-
   const goToLine = ({ nextCategory = "", nextLine = "", sectionId = "" }) => {
     setCategory(nextCategory);
     setLine(nextLine);
     setQuery("");
-
     setTimeout(() => {
       const el = document.getElementById(sectionId);
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 0);
   };
-
   const filtered = useMemo(() => {
     const q = normalize(query);
-
     return PRODUCTS.filter((p) => {
       const byCategory = category ? p.category === category : true;
-
       const byLine = line
         ? Array.isArray(p.lines) && p.lines.includes(line)
         : true;
-
       const byQuery = q
         ? normalize(p.name).includes(q) ||
           normalize(p.desc || "").includes(q) ||
           (p.presentations || []).some((x) => normalize(x).includes(q))
         : true;
-
       return byCategory && byLine && byQuery;
     });
   }, [category, line, query]);
-
   const grouped = useMemo(() => {
     const groups = CATEGORY_ORDER.reduce((acc, c) => ({ ...acc, [c]: [] }), {});
-
     for (const p of filtered) {
       if (!groups[p.category]) groups[p.category] = [];
       groups[p.category].push(p);
     }
-
     return groups;
   }, [filtered]);
-
   const chips = [
     category && {
       key: "cat",
@@ -677,27 +770,23 @@ export default function Catalogo() {
       onClear: () => setQuery(""),
     },
   ].filter(Boolean);
-
   return (
     <div className="catalog-page">
       <div className="container catalog-hero">
         <h1>Catálogo de Productos</h1>
         <p>
           Explore nuestras líneas: Pulpas, Jugos Cítricos, Sabores Especiales y
-          Grasas & Aceites.
+          Grasas & Aceites y Frutas Congeladas.
         </p>
       </div>
-
       <div className="container lines-info">
         <h2 className="lines-info-title">Líneas de producto</h2>
-
         <p className="lines-info-text">
           En ARCODALI nos enorgullece ofrecer pulpas de fruta de las más puras y
           concentradas del mercado, elaboradas con fruta real seleccionada.
           Nuestras pulpas son 100 % naturales, sin saborizantes ni aditivos:
           solo fruta hecha pulpa, fresca y de excelente calidad.
         </p>
-
         <div className="lines-grid">
           <div
             className="line-card premium"
@@ -725,7 +814,6 @@ export default function Catalogo() {
               sabor para refrescos, coctelería y repostería.
             </p>
           </div>
-
           <div
             className="line-card light"
             role="button"
@@ -752,7 +840,6 @@ export default function Catalogo() {
               La opción más ligera y saludable.
             </p>
           </div>
-
           <div
             className="line-card citricos"
             role="button"
@@ -779,7 +866,6 @@ export default function Catalogo() {
               para usar en cocina, coctelería o bebidas refrescantes.
             </p>
           </div>
-
           <div
             className="line-card sabores"
             role="button"
@@ -806,9 +892,14 @@ export default function Catalogo() {
               frutas reales y recetas únicas para compartir y disfrutar.
             </p>
           </div>
+          <div className="line-card congeladas" role="button" tabIndex={0}
+            onClick={() => goToLine({ nextCategory: "frutas", nextLine: "congeladas", sectionId: "sec-frutas" })}
+            onKeyDown={(e) => e.key === "Enter" && goToLine({ nextCategory: "frutas", nextLine: "congeladas", sectionId: "sec-frutas" })}>
+            <h3>Frutas Congeladas</h3>
+            <p>Frutas naturales congeladas, ideales para batidos, bebidas y postres.</p>
+          </div>
         </div>
       </div>
-
       <div className="container filters" role="search">
         <div className="filters-row">
           <select
@@ -822,8 +913,8 @@ export default function Catalogo() {
             <option value="pulpas">Pulpas Naturales</option>
             <option value="sabores">Sabores Especiales</option>
             <option value="grasas">Grasas y Aceites</option>
+              <option value="frutas">Frutas Congeladas</option>
           </select>
-
           <select
             className="select"
             value={line}
@@ -837,7 +928,6 @@ export default function Catalogo() {
               </option>
             ))}
           </select>
-
           <input
             className="search"
             placeholder="        Buscar producto..."
@@ -846,7 +936,6 @@ export default function Catalogo() {
             aria-label="Buscar producto"
           />
         </div>
-
         {chips.length > 0 && (
           <div
             className="chips"
@@ -867,35 +956,31 @@ export default function Catalogo() {
           </div>
         )}
       </div>
-
       <CategorySection
         id="sec-jugos"
         title="Jugos Cítricos"
         items={grouped.jugos}
         activeLine={line}
       />
-
       <CategorySection
         id="sec-pulpas"
         title="Pulpas Naturales"
         items={grouped.pulpas}
         activeLine={line}
       />
-
       <CategorySection
         id="sec-sabores"
         title="Sabores Especiales ARCODALI"
         items={grouped.sabores}
         activeLine={line}
       />
-
       <CategorySection
         id="sec-grasas"
         title="Grasas & Aceites"
         items={grouped.grasas}
         activeLine={line}
       />
-
+      <CategorySection id="sec-frutas" title="Frutas Congeladas" items={grouped.frutas} activeLine={line} />
       <a
         href="https://api.whatsapp.com/send/?phone=50686458846&text=Hola+ARCODALI%2C+quisiera+informaci%C3%B3n+del+cat%C3%A1logo.&type=phone_number&app_absent=0"
         className="whatsapp-float"
@@ -906,15 +991,12 @@ export default function Catalogo() {
         <span className="wa-icon">💬</span>
         <span className="wa-text">Escribinos</span>
       </a>
-
       <Link className="btn-float" to="/" aria-label="Volver al inicio">
         ← Volver
       </Link>
-
       <div className="container contact-whatsapp">
         <h3>¿Listo para cotizar o hacer pedido?</h3>
         <p>Escríbanos y con gusto le atendemos de inmediato.</p>
-
         <a
           className="cta"
           href="https://wa.me/50686458846?text=Hola%20ARCODALI%2C%20me%20interesa%20el%20cat%C3%A1logo."

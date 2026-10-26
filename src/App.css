@@ -799,3 +799,48 @@ select{
     padding:16px;
   }
 }
+
+
+/* ===== Ajustes para las cinco líneas de ARCODALI ===== */
+/* Mantiene la cuadrícula original de tres columnas y centra las dos últimas. */
+.lines .lines-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+}
+.lines .line-card {
+  grid-column: span 2;
+  min-width: 0;
+}
+.lines .line-card:nth-child(4) { grid-column: 2 / span 2; }
+.lines .line-card:nth-child(5) { grid-column: 4 / span 2; }
+.lines .line-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #edf5ed;
+  color: var(--green-900);
+  font-weight: 800;
+  font-size: .96rem;
+}
+.lines .line-card p + p { margin-top: 10px; }
+.lines .line-card.frutas-congeladas {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f8f1 100%);
+  border-color: #d7e9d9;
+}
+.lines .line-card.frutas-congeladas .line-badge {
+  background: #e0f0e3;
+}
+.lines .lines-cta { text-align: center; margin-top: 30px; }
+@media (max-width: 991px) {
+  .lines .lines-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lines .line-card,
+  .lines .line-card:nth-child(4),
+  .lines .line-card:nth-child(5) { grid-column: auto; }
+  .lines .line-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .lines .lines-grid { grid-template-columns: 1fr; }
+  .lines .line-card:last-child:nth-child(odd) { grid-column: auto; }
+}

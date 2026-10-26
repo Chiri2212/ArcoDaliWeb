@@ -638,3 +638,130 @@ section.container > h2 {
 .price-group.precios-unificados h4 {
   color: var(--brand);
 }
+
+
+/* ============================================================
+   AJUSTES ARCODALI — SOBRE EL CSS ORIGINAL
+   Conserva el diseño anterior; mejora frutas y filtros.
+   ============================================================ */
+
+/* Tarjetas informativas: quinta línea de frutas congeladas */
+.line-card.frutas::before,
+.line-card.congeladas::before,
+.line-card.frutas-congeladas::before {
+  background: linear-gradient(180deg, rgba(18, 143, 111, .9), rgba(18, 143, 111, .42));
+}
+
+/* Catálogo: exactamente tres productos por fila en escritorio */
+.product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.product-grid > .product-card {
+  grid-column: auto;
+  min-width: 0;
+}
+
+/* Fotografías: mismo espacio para todas las tarjetas */
+.product-media {
+  height: 265px;
+  min-height: 265px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #f7fbf7, #fff);
+}
+.product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Contenido: título y precios ordenados */
+.product-body { min-width: 0; }
+.product-title { line-height: 1.35; }
+.product-card .actions { align-self: end; }
+
+/* Frutas congeladas: acento discreto, sin cambiar las demás */
+.line-badge.frutas,
+.line-badge.congeladas,
+.line-badge.frutas-congeladas {
+  color: #087b61;
+  border-color: rgba(8, 123, 97, .32);
+  background: rgba(8, 123, 97, .09);
+}
+.price-group.frutas::before,
+.price-group.congeladas::before,
+.price-group.frutas-congeladas::before { background: #128f6f; }
+.price-group.frutas h4,
+.price-group.congeladas h4,
+.price-group.frutas-congeladas h4 { color: #087b61; }
+
+/* Filtros: se aplican también a select/input sin clases propias.
+   No afecta otros formularios fuera de la barra. */
+.filters-row > select,
+.filters-row > input,
+.filters-row .select,
+.filters-row .search,
+.filters select,
+.filters input[type="search"],
+.filters input[type="text"] {
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(15, 23, 42, .12);
+  border-radius: 18px;
+  background-color: #fff;
+  color: #1a1d22;
+  font: inherit;
+  font-size: 14px;
+  padding: 0 16px;
+  box-shadow: 0 8px 20px rgba(2, 6, 23, .05);
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.filters-row > select,
+.filters-row > input,
+.filters-row .select,
+.filters-row .search {
+  grid-column: span 4;
+}
+.filters-row input[type="search"],
+.filters-row input[type="text"],
+.filters-row .search {
+  padding-left: 46px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%235a6573' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: 18px 18px;
+}
+.filters-row select:focus,
+.filters-row input:focus,
+.filters select:focus,
+.filters input:focus {
+  outline: none;
+  border-color: rgba(13, 103, 46, .55);
+  box-shadow: 0 0 0 4px rgba(13, 103, 46, .10);
+}
+.filters-row input::placeholder,
+.filters input::placeholder { color: #7a8794; }
+
+/* Pantallas medianas: dos productos por fila */
+@media (max-width: 1000px) {
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-media { height: 245px; min-height: 245px; }
+}
+/* Tablet: filtros en columna, sin alterar su estética */
+@media (max-width: 900px) {
+  .filters-row > select,
+  .filters-row > input,
+  .filters-row .select,
+  .filters-row .search { grid-column: span 12; }
+}
+/* Celular: una tarjeta por fila */
+@media (max-width: 680px) {
+  .product-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .product-media { height: 260px; min-height: 260px; }
+}
